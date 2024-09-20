@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Moderustic:wght@300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+/* Estilos Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway';
+    background-color: #000;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: transparent;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #9c9c9c;
+}
+
+.contact-btn {
+    border: 2px solid #fff;
+    padding: 10px 20px;
+    border-radius: 30px;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.contact-btn:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.hero-section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-top: 10px;
+    color: #c4c4c4;
+    animation: fadeIn 2.5s ease-in-out;
+}
+
+.hero-content span {
+    color: #f5a623;
+    font-weight: bold;
+}
+
+.mouse-icon {
+    width: 30px;
+    height: 50px;
+    border: 2px solid #fff;
+    border-radius: 50px;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: scroll 2s infinite;
+}
+
+@keyframes scroll {
+    0% { opacity: 0; transform: translateY(-10px); }
+    50% { opacity: 1; transform: translateY(10px); }
+    100% { opacity: 0; transform: translateY(20px); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Seção de busca */
+.faq-section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.search-box {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.search-box input {
+    width: 400px;
+    padding: 15px;
+    border-radius: 30px;
+    border: 2px solid #fff;
+    background-color: transparent;
+    color: #fff;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.search-box input::placeholder {
+    color: #c4c4c4;
+}
+
+.search-box input:focus {
+    width: 450px;
+}
+
+.search-btn {
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    color: #fff;
+}
+
+.search-btn:hover {
+    color: #f5a623;
+}
+
+/* Seção FAQ */
+.faq {
+    max-width: 800px;
+    margin: 0 auto;
+    color: #fff;
+}
+
+.faq-item {
+    background-color: #111;
+    margin: 15px 0;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+    cursor: pointer; /* Adiciona um cursor de ponteiro */
+}
+
+.faq-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px; /* Padding para a área clicável */
+}
+
+.faq-item:hover {
+    background-color: #222;
+}
+
+.faq-toggle {
+    font-size: 24px;
+    transition: transform 0.3s ease;
+}
+
+.faq-toggle.expanded {
+    transform: rotate(45deg);
+}
+
+.faq-content {
+    padding: 10px 20px; /* Espaço interno para o conteúdo */
+    background-color: #222; /* Cor de fundo para destacar */
+    border-radius: 0 0 10px 10px; /* Bordas arredondadas na parte inferior */
+    color: #fff; /* Cor do texto */
+}
+
+/* Rodapé */
+.footer {
+    padding: 30px 20px;
+    text-align: center;
+    background-color: #000;
+    border-top: 1px solid #222;
+}
+
+.footer-links a {
+    color: #aaa;
+    margin: 0 15px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #fff;
+}
+
+.footer-container p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 20px;
+}
